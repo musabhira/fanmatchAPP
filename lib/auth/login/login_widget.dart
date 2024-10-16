@@ -374,7 +374,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              await actions.googleSigninFlow();
+                              await actions.signInWithGoogle();
                               _model.user = await UsersTable().queryRows(
                                 queryFn: (q) => q.eq(
                                   'id',
